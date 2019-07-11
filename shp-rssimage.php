@@ -51,7 +51,7 @@ function shp_rssimage_extend() {
 	$image_mime_type = get_post_mime_type( $image_id );
 
 	$out = sprintf(
-		'%1$s<media:content class="webfeedsFeaturedVisual" url="%2$s" type="%3$s" medium="image" width="%4$s" height="%5$s" />',
+		'%1$s<media:content url="%2$s" type="%3$s" medium="image" width="%4$s" height="%5$s" />',
 		PHP_EOL,
 		$image_url,
 		$image_mime_type,
