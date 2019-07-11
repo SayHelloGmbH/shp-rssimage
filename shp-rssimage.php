@@ -7,7 +7,7 @@
  * Author URI:      https://sayhello.ch/?utm_source=wp-plugin&utm_medium=wp-plugin&utm_campaign=shp-rssimage
  * Text Domain:     shp-rssimage
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         0.2.0
  */
 
 add_action( 'init', 'shp_rssimage_init' );
