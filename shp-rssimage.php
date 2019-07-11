@@ -7,7 +7,7 @@
  * Author URI:      https://sayhello.ch/?utm_source=wp-plugin&utm_medium=wp-plugin&utm_campaign=shp-rssimage
  * Text Domain:     shp-rssimage
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         0.2.0
  */
 
 add_action( 'init', 'shp_rssimage_init' );
@@ -61,3 +61,12 @@ function shp_rssimage_extend() {
 
 	echo apply_filters( 'shp_rssimage__out', $out );
 }
+
+function shp_rssimage_featured_to_rss( $content ) {
+	if ( has_post_thumbnail( get_the_ID() ) ) {
+		$content = get_the_post_thumbnail( get_the_ID(), 'medium', [ 'class' => 'webfeedsFeaturedVisual' ] ) . $content;
+	}
+	return $content;
+}
+
+add_filter( 'the_excerpt_rss', 'shp_rssimage_featured_to_rss' );

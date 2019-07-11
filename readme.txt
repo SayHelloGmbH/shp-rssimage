@@ -18,5 +18,8 @@ Adds the post thumbnail to the RSS feed using the XML tag specified in the [Medi
 
 == Changelog ==
 
+= 0.2.0 =
+* Add image tag to RSS excerpt content.
+
 = 0.1.0 =
 * Initial version.
