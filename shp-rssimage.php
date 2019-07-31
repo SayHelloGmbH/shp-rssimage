@@ -7,13 +7,12 @@
  * Author URI:      https://sayhello.ch/?utm_source=wp-plugin&utm_medium=wp-plugin&utm_campaign=shp-rssimage
  * Text Domain:     shp-rssimage
  * Domain Path:     /languages
- * Version:         0.2.0
+ * Version:         0.2.1
  */
 
 add_action( 'init', 'shp_rssimage_init' );
 
 function shp_rssimage_init() {
-
 	// Add the media namespace to the rss namespace declaration block
 	add_action( 'rss2_ns', 'shp_rssimage_namespace' );
 
@@ -26,7 +25,6 @@ function shp_rssimage_namespace() {
 }
 
 function shp_rssimage_extend() {
-
 	if ( ! has_post_thumbnail( get_the_ID() ) ) {
 		return;
 	}
