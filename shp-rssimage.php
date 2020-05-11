@@ -51,7 +51,7 @@ function shp_rssimage_extend() {
 	$out = sprintf(
 		'%1$s<media:content url="%2$s" type="%3$s" medium="image" width="%4$s" height="%5$s" />',
 		PHP_EOL,
-		$image_url,
+		str_replace('&', '&#038;', $image_url),
 		$image_mime_type,
 		$image_dimensions['width'],
 		$image_dimensions['height']
